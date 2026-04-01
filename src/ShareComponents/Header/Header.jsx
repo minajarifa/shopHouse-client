@@ -1,13 +1,23 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
+import Logo from "../logo";
 
 export default function Header() {
   const navLink = (
     <>
       <li>
-        <NavLink to={`/`}>Home</NavLink>
+        <NavLink to={`/`}>services</NavLink>
       </li>
       <li>
-        <NavLink to={`Register`}>Register</NavLink>
+        <NavLink to={`/`}>Coverage</NavLink>
+      </li>
+      <li>
+        <NavLink to={`/`}>About Us</NavLink>
+      </li>
+      <li>
+        <NavLink to={`/`}>Pricing</NavLink>
+      </li>
+      <li>
+        <NavLink to={`/`}>be a rider</NavLink>
       </li>
     </>
   );
@@ -39,16 +49,19 @@ export default function Header() {
               {navLink}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to={`/`} className="btn btn-ghost text-2xl">
+            <Logo></Logo>
+            Shope House
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
         <div className="navbar-end ">
-          <button className="bg-[#CAEB66] btn text-black">
+          <button  className="bg-[#FFFF] btn text-black hover:bg-[#CAEB66]">
             <NavLink to={`Register`}>Register</NavLink>
           </button>
-          <button className="bg-[#FFFF] btn text-black">
+          <button className="bg-[#FFFF] btn text-black hover:bg-[#CAEB66]">
             <NavLink to={`Login`}>Login</NavLink>
           </button>
         </div>
